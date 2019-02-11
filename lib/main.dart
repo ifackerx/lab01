@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-
+import './ui/first_screen.dart';
+import './ui/second_screen.dart';
+import './ui/detail_screen.dart';
+import './ui/my_custom_form.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -14,7 +17,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      // home: MyHomePage(),
+      initialRoute: "/",
+      routes: {
+        "/" : (context) => MyCustomForm(),
+        "/second" : (context) => SecondScreen(),
+        "/detail" : (context) => DetailScreen(),
+      },
     );
   }
 
